@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Sidik & Ami</title>
+
+<style>
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+}
+
+/* BACKGROUND PREMIUM HALUS */
+body {
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.6), transparent 60%),
+    linear-gradient(180deg, #f6f3ef, #ebe5dd);
+  color: #3a3a3a;
+  overflow-x: hidden;
+}
+
+/* TEXTURE OVERLAY */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* PASSWORD SCREEN */
+#lock {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, #f6f3ef, #ebe5dd);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#lock h2 {
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+
+#lock input {
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  width: 220px;
+  border-radius: 6px;
+  border: 1px solid #cfc7bd;
+}
+
+#lock button {
+  padding: 10px 26px;
+  border: none;
+  background: #b89b7a;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+/* CONTENT */
+section {
+  min-height: 100vh;
+  padding: 60px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  animation: fade 1.3s ease;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+img {
+  width: 100%;
+  max-width: 330px;
+  margin: 16px auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* ANIMATION */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+music.volume = 0.4;
+
+document.addEventListener("click", ()=>{
+  music.play().catch(()=>{});
+},{once:true});
+</script>
+
+<!-- PASSWORD -->
+<div id="lock">
+<h2>Untuk Sidik & Ami</h2>
+<p class="lock-sub">Masukkan kata sandi untuk membuka kenangan</p>
+  <input type="password" id="pw" placeholder="Password">
+  <button onclick="unlock()">Masuk</button>
+</div>
+
+<!-- CONTENT -->
+<div id="content" style="display:none">
+
+<section>
+  <h1>Untuk Sidik & Ami</h1>
+  <p>Tidak semua kisah bermula dari rencana besar. Kadang kebersamaan tumbuh dari hal-hal sederhana, dari waktu yang dibagi, dan dari proses saling memahami.<br><br>
+  Beberapa kenangan tidak dibuat untuk dipamerkan, melainkan disimpan dengan rasa syukur. Semoga kebersamaan ini selalu menemukan caranya untuk memberi hangat.
+  </p>
+</section>
+
+<section>
+  <img src="photos/foto.jpg">
+  <p>Setiap hubungan punya ceritanya sendiri. Bukan tentang siapa yang paling sempurna, tetapi tentang dua orang yang mau saling memahami dan bertahan.
+  </p>
+</section>
+
+<section>
+  <p>Sidik dan Ami tidak berjalan bersama karena segalanya selalu mudah, melainkan karena ada kesediaan untuk tetap tinggal saat keadaan menuntut kesabaran.<br><br>
+  Kebersamaan ini tumbuh dari perhatian-perhatian kecil yang sering luput terlihat, dari pengertian yang dibangun di tengah perbedaan,dan dari kepercayaan yang lahir ketika keduanya memilih untuk saling jujur.<br><br>
+  Dalam perjalanan ini, cinta tidak selalu hadir sebagai kebahagiaan yang riuh, tetapi sebagai ketenangan yang bertahan, sebagai keputusan untuk saling menjaga di setiap perubahan hidup.<br><br>
+  Di sanalah, dalam kesederhanaan yang tulus dan sunyi itu, kebersamaan Sidik dan Ami menemukan maknanya yang paling dalam.
+  </p>
+</section>
+
+<section>
+  <img src="photos/foto1.jpg">
+  <img src="photos/foto2.jpg">
+  <img src="photos/foto3.jpg">
+  <p>Tentang tawa, waktu, dan kebersamaan yang sederhana. Setiap foto di sini menyimpan momen yang mungkin sederhana, namun selalu diingat rasanya.
+  </p>
+</section>
+
+<section class="slide slide-penutup">
+  <div>
+  <p>Halaman ini dibuat sebagai hadiah kecil untuk merayakan kebersamaan yang telah tumbuh. Semoga apa yang sudah dijalani selalu dijaga dengan kejujuran, pengertian, dan rasa saling menghormati.<br><br>
+ <p class="romantic-text">
+  Tidak semua hal dalam hubungan harus besar dan sempurna. Yang sering kali paling berarti justru kesediaan dua orang untuk berjalan berdampingan, saling memahami, dan saling memilih setiap harinya.
+  </p>
+  <p class="signature">— Dari Ojoy</p>
+  </div>
+  </section>
+
+<section class="slide slide-penutup">
+  <div>
+ <p class="romantic-text">
+  Semoga setiap langkah yang dijalani bersama selalu dipenuhi rasa saling menghargai. Semoga setiap perbedaan bisa menjadi ruang untuk belajar, dan setiap kebersamaan menjadi alasan untuk bertumbuh.
+ </p>
+  <p class="signature">— Dengan doa terbaik</p>
+  </div>
+  </section>
+
+  </div>
+
+<script>
+function unlock() {
+  const password = document.getElementById("pw").value;
+  if (password === "onlyusSA") {
+    document.getElementById("lock").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  } else {
+    alert("Password salah");
+  }
+}
+</script>
+
+</body>
+</html>
